@@ -1,0 +1,10 @@
+{
+  "name": "deepet",
+  "version": "0.1.1",
+  "description": "向本机Deepet发送最少量的任务状态事件，驱动桌面时钟；不发送对话或命令正文。",
+  "hooks": "./hooks/hooks.json",
+  "interface": {
+    "displayName": "Deepet",
+    "shortDescription": "向本机Deepet发送最少量的任务状态事件，驱动桌面时钟；不发送对话或命令正文。"
+  }
+}

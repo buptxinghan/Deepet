@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><!--SESSION--><title>Deepet · 我的桌面</title><link rel="stylesheet" href="app.css"></head>
+<body>
+<svg class="icon-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+<symbol id="i-pet" viewBox="0 0 32 32"><path d="M6 18c0-7 4-11 10-11s10 4 10 11c0 4-3 7-7 7h-6c-4 0-7-3-7-7Z"/><path d="m7 14-3-3m21 3 3-3M16 7V3m0 0-3 2m3-2 3 2M12 17v2m8-2v2m-6 3h4"/></symbol>
+<symbol id="i-home" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="3"/><path d="M8 21h8m-4-3v3M3 13h18"/></symbol>
+<symbol id="i-server" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="7" rx="2"/><rect x="4" y="14" width="16" height="7" rx="2"/><path d="M8 6.5h.01M8 17.5h.01M15 6.5h2m-2 11h2"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="4"/><path d="M12 7v5l3 2M9 18h6"/></symbol>
+<symbol id="i-settings" viewBox="0 0 24 24"><path d="M4 7h7m4 0h5M4 17h3m4 0h9"/><circle cx="13" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></symbol>
+<symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></symbol>
+<symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 12V6a1.5 1.5 0 0 1 3 0v5-7a1.5 1.5 0 0 1 3 0v7-5a1.5 1.5 0 0 1 3 0v6-3a1.5 1.5 0 0 1 3 0v5c0 5-2 8-7 8-3 0-5-2-7-5l-2-3a1.5 1.5 0 0 1 2-2l3 3"/></symbol>
+<symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Zm7-1v4m-2-2h4"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M20 5a5 5 0 0 0-8 1 5 5 0 0 0-8-1c-5 5 8 14 8 14S25 10 20 5Z"/></symbol>
+<symbol id="i-message" viewBox="0 0 24 24"><path d="M6 4h12a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-7l-5 3v-3a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3Z"/><path d="M8 9h8m-8 4h5"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5m-4-4a8 8 0 0 1 13-3l2 3M4 16l2 3a8 8 0 0 0 13-3"/></symbol>
+<symbol id="i-link" viewBox="0 0 24 24"><path d="m10 14 4-4m-6 5-2 2a4 4 0 0 0 6 6l3-3m1-11 2-2a4 4 0 0 0-6-6L9 4" transform="translate(0 -1)"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14A8 8 0 0 1 10 4a8.5 8.5 0 1 0 10 10Z"/></symbol>
+<symbol id="i-temp" viewBox="0 0 24 24"><path d="M9 14V5a3 3 0 0 1 6 0v9a5 5 0 1 1-6 0Zm3-6v9m6-11h2m-2 4h2"/></symbol>
+</svg>
+<div class="app">
+<aside>
+<a class="brand" href="#overview" aria-label="Deepet 首页"><span class="brand-icon"><svg><use href="#i-pet"/></svg></span><span>Deepet<span class="brand-period">.</span><small>A LITTLE COMPANY</small></span></a>
+<p class="nav-label">工作空间</p>
+<nav aria-label="主要页面">
+<button data-page="overview" class="selected"><svg class="icon"><use href="#i-home"/></svg><span>我的桌面</span><span class="nav-indicator"></span></button>
+<button data-page="servers"><svg class="icon"><use href="#i-server"/></svg><span>服务器</span></button>
+<button data-page="device"><svg class="icon"><use href="#i-clock"/></svg><span>时钟连接</span></button>
+<button data-page="settings"><svg class="icon"><use href="#i-settings"/></svg><span>陪伴设置</span></button>
+</nav>
+<div class="sidebar-bottom"><div class="sidebar-device"><span class="sidebar-device-icon"><svg class="icon"><use href="#i-clock"/></svg></span><div><span>桌上的小伙伴</span><small id="side-device-state">正在连接时钟</small></div><span id="side-device-dot" class="dot"></span></div><div class="side-bottom"><span id="service-dot" class="dot"></span><span id="service-state">正在连接</span><small>在这台 Mac 上，安静运行。</small></div></div>
+</aside>
+<main>
+<header><div><p class="eyebrow" id="eyebrow">WORKSPACE / OVERVIEW</p><h1 id="page-title">我的桌面</h1><p class="header-description" id="page-description">专注做你的事，其他的交给她。</p></div><div class="header-actions"><span class="connection-pill" id="header-connection"><span class="dot"></span><span id="header-device-state">正在连接</span></span><button id="pause" class="quiet">暂停联动</button></div></header>
+<section id="page-overview" class="page">
+<div class="overview-grid">
+<article class="preview-card">
+<div class="card-heading"><div><span class="section-kicker">ON YOUR DESK</span><h2>陪伴，就在眼前。</h2></div><span class="tag resolution">240 × 240</span></div>
+<div class="preview-stage"><div class="clock-case"><div class="clock-screen" aria-label="无触屏时钟画面"><div class="clock-top"><time id="clock">--:--</time><span id="date"></span></div><div id="speech" class="bubble">正在连接本机状态…</div><div class="shadow"></div><img id="pet" alt="Deepet companion" draggable="false" src="/assets/01-idle.gif"><div class="screen-metrics" id="single-metrics"><div><span id="source-label">我的 Mac</span><span id="temperature">--°C</span></div><div id="screen-values"></div></div><div id="server-metrics" class="server-metrics" hidden><div id="server-screen-rows"></div></div></div><span class="bezel-mark">D E E P E T</span></div></div>
+<div class="scene-status"><span class="scene-dot"></span><span id="scene-reason">自动陪伴</span><span class="scene-auto">自动联动</span></div>
+<div class="pet-interactions" aria-label="桌宠互动"><button data-react="greet"><svg class="icon"><use href="#i-hand"/></svg>打个招呼</button><button data-react="tickle"><svg class="icon"><use href="#i-sparkles"/></svg>挠痒痒</button><button data-react="praise"><svg class="icon"><use href="#i-heart"/></svg>鼓励一下</button></div>
+</article>
+<div class="overview-side">
+<article class="card source-card"><div class="card-heading"><div class="card-title"><svg class="icon"><use href="#i-home"/></svg><h2>状态来源</h2></div><span class="tag live" id="source-fresh">实时</span></div><label class="sr-only" for="source-select">显示来源</label><select id="source-select"><option value="mac">我的 Mac</option><option value="rotate">自动轮播</option><option value="servers">双服务器同屏</option></select><div id="server-display-options" class="server-display-options" hidden><p id="server-order-hint" class="caption"></p></div><div class="subsection-heading"><span>这台 Mac</span><span>实时采样</span></div><div class="metric-grid" id="mac-summary"></div></article>
+<article class="card ai-card" id="ai-card"><div class="card-heading"><div class="card-title"><span class="code-icon"><svg class="icon"><use href="#i-code"/></svg></span><div><h2>Codex</h2><span class="card-subtitle">AI 编程伙伴</span></div></div><span class="tag" id="agent-badge">等待接入</span></div><div class="agent-current"><span class="activity-bars" aria-hidden="true"><i></i><i></i><i></i></span><p id="agent-description">等待下一次灵感。</p></div><div class="card-bottom"><span id="agent-meta">任务状态会自动同步</span><button id="ai-guide" class="text-button">连接说明 <span aria-hidden="true">↗</span></button></div><div id="ai-guide-text" class="inline-guide" hidden><p class="caption">在 Codex 中安装 Deepet 插件，再审阅并信任 Hooks。之后自动同步任务状态，只发送状态与匿名会话标识。</p><button id="open-ai-plugin" class="text-button">打开 Deepet 插件文件夹 ↗</button></div></article>
+<article class="card device-summary"><div class="device-summary-icon"><svg class="icon"><use href="#i-clock"/></svg></div><div class="device-summary-text"><h2 id="overview-device-label">正在连接时钟</h2><p><span id="device-address-short">Wi-Fi 时钟</span><span class="tiny-divider">/</span><span id="device-version">等待设备</span></p></div><button class="icon-button" data-page="device" aria-label="查看时钟连接"><svg class="icon"><use href="#i-arrow"/></svg></button></article>
+</div>
+</div>
+<article class="card note-card"><div class="note-heading"><span class="note-icon"><svg class="icon"><use href="#i-message"/></svg></span><div><h2>留一句话给她</h2><p class="caption">一句叮嘱，一点鼓励，都会出现在气泡里。</p></div></div><div class="note-controls"><label class="sr-only" for="note">留言</label><div class="note-input"><input id="note" maxlength="56" placeholder="今天也要记得喝水呀。"><span id="note-count">0 / 28</span></div><label class="check pinned-check"><input id="note-pinned" type="checkbox" checked>常驻气泡</label><button id="send-note" class="primary">发送留言 <svg class="icon"><use href="#i-arrow"/></svg></button><button id="clear-note" class="quiet">收起</button></div></article>
+</section>
+<section id="page-servers" class="page" hidden>
+<div class="section-heading"><p class="muted"><span class="dot"></span>通过现有 SSH 连接，每约 10 秒更新。</p><button id="refresh-servers"><svg class="icon"><use href="#i-refresh"/></svg>立即刷新</button></div><div id="server-cards" class="server-grid"></div>
+<article class="card selection-card"><div class="card-heading"><div class="card-title"><svg class="icon"><use href="#i-home"/></svg><h2>谁来出现在时钟上？</h2></div><span class="tag">最多 2 台</span></div><p class="caption">勾选服务器，再调整顺序。前两台会左右同屏显示，离线时仍保留位置。</p><div id="server-options" class="server-options"></div><div class="button-row"><button id="save-servers" class="primary">保存选择与顺序</button><button id="show-server-list">在时钟上同屏显示 <svg class="icon"><use href="#i-arrow"/></svg></button></div></article>
+</section>
+<section id="page-device" class="page" hidden>
+<div class="device-layout"><article class="card connection-card"><span class="large-icon"><svg class="icon"><use href="#i-clock"/></svg></span><h2>把陪伴，连接到桌上。</h2><p class="body-text muted">动画留在时钟里，Mac 只传递状态。<br>轻轻连上，就能一直陪着你。</p><form id="device-form"><label for="device-address">时钟地址</label><input id="device-address" placeholder="192.168.1.100" autocomplete="off"><label for="device-token">连接令牌</label><input id="device-token" type="password" autocomplete="off" placeholder="填写时钟管理页的令牌"><label class="check"><input id="device-enabled" type="checkbox">连接后自动同步画面</label><button class="primary" type="submit">检查连接 <svg class="icon"><use href="#i-link"/></svg></button></form><p id="device-result" class="notice">尚未连接时钟</p></article>
+<div class="device-side"><article class="card"><div class="card-heading"><h2>从 Mac 到时钟</h2><span class="tag">局域网直连</span></div><ol class="steps"><li><b>汇总你关心的状态</b><span>这台 Mac、SSH 服务器，以及 Codex 任务。</span></li><li><b>同一 Wi-Fi，轻量同步</b><span>每约 2 秒发送一小份状态数据。</span></li><li><b>陪伴在时钟里继续</b><span>动画本地播放；断线后继续计时和陪伴。</span></li></ol></article><article class="card device-health-card"><div class="card-heading"><h2>设备状态</h2><span id="device-health-badge" class="tag">待连接</span></div><div id="device-diagnostics" class="device-diagnostics"><p class="caption">连接后查看固件与存储状态。</p></div></article></div></div>
+</section>
+<section id="page-settings" class="page" hidden>
+<article class="card settings-card"><div class="card-heading"><div class="card-title"><svg class="icon"><use href="#i-settings"/></svg><h2>按你的节奏陪伴</h2></div><span class="tag">保存在这台 Mac</span></div><form id="rules-form">
+<div class="settings-row"><span class="setting-icon"><svg class="icon"><use href="#i-moon"/></svg></span><div class="setting-description"><label for="night-start">晚安与早安</label><p class="caption">北京时间；任务和重要提醒始终优先。</p></div><div class="time-pair"><input id="night-start" type="time" value="21:00"><span>至</span><input id="night-end" type="time" value="07:00" aria-label="早安时间"></div></div>
+<div class="settings-row"><span class="setting-icon"><svg class="icon"><use href="#i-temp"/></svg></span><div class="setting-description"><label for="mac-hot">Mac 温度提醒</label><p class="caption">持续 30 秒后提醒，不打扰短暂的忙碌。</p></div><div class="number-field"><input id="mac-hot" type="number" min="50" max="105" value="85"><span>°C</span></div></div>
+<div class="settings-row"><span class="setting-icon"><svg class="icon"><use href="#i-server"/></svg></span><div class="setting-description"><label for="server-hot">服务器 GPU 温度提醒</label><p class="caption">逐台判断，最多每 5 分钟提醒一次。</p></div><div class="number-field"><input id="server-hot" type="number" min="50" max="105" value="80"><span>°C</span></div></div>
+<div class="settings-row"><span class="setting-icon"><svg class="icon"><use href="#i-refresh"/></svg></span><div class="setting-description"><label for="rotation-seconds">状态轮播间隔</label><p class="caption">选择“自动轮播”时，在各个来源间切换。</p></div><select id="rotation-seconds"><option value="10">10 秒</option><option value="15">15 秒</option><option value="30">30 秒</option><option value="60">60 秒</option></select></div>
+<div class="settings-row"><span class="setting-icon"><svg class="icon"><use href="#i-refresh"/></svg></span><div class="setting-description"><label for="idle-action-seconds">日常动作停留</label><p class="caption">9个动作依次陪伴；打盹60秒、醒来30秒，任务与提醒优先。</p></div><select id="idle-action-seconds"><option value="30">30 秒</option><option value="45" selected>45 秒 · 推荐</option><option value="60">60 秒</option></select></div>
+<div class="settings-actions"><p class="caption">舒服的节奏，才是长久的陪伴。</p><button class="primary" type="submit">保存陪伴设置</button></div>
+</form></article><p class="settings-footnote caption">关闭窗口后，Deepet 仍会在菜单栏运行。退出应用后停止同步，时钟继续本地陪伴。</p>
+</section>
+<footer><span><span class="footer-brand">Deepet</span> <span class="footer-separator">/</span> MADE FOR YOUR DESK</span><span id="connection-footer">正在读取真实数据</span></footer>
+</main></div><div id="toast" role="status" hidden></div><script src="app.js"></script>
+</body></html>
