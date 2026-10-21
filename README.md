@@ -17,6 +17,8 @@ Deepet 是个人体验阶段的开源项目，包含 macOS 配套程序、浏览
 
 本仓库发布代码及原创几何占位图。**不包含 DeepSeek 娘或其他第三方角色 GIF、转换后的动画、系统字体字库、个人配置、实机照片、调试日志或预编译固件。** 现有第三方角色素材未核实完整的再分发授权，因此不会随源码发布。没有提供素材时，Mac 界面使用静态占位角色；补充自己有权使用的素材后可启用动画。见 [素材格式与授权](docs/ASSETS.md)。
 
+早期本地原型的角色动画取自 [dsh-TUI 鲸娘像素表情集](https://dshtui.com/pets/whale-girl-emoji/)，中文字库由 macOS 苹方 PingFang SC Regular 生成。来源引用、转换方式和待确认的授权范围见 [素材来源与致谢](docs/ASSETS.md#参考素材来源与致谢)；引用不代表已取得素材再分发许可。
+
 公开源码从独立目录建立全新 Git 历史，未导入开发工作区历史。此版本使用独立应用标识 `org.deepet.app` 和 `~/Library/Application Support/Deepet` 设置目录。
 
 ## 在 Mac 上运行

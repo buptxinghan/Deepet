@@ -21,6 +21,25 @@ source materials before distribution.
 
 ## Artwork and fonts
 
+The early local prototype referenced the following materials:
+
+- DeepSeek girl / whale-girl pixel animations (22 GIFs), obtained from the
+  [dsh-TUI whale-girl emoji page](https://dshtui.com/pets/whale-girl-emoji/).
+  The prototype displayed the GIFs on Mac and converted their 69×66 logical
+  pixel grid to WSP1 sprites for the clock. This identifies the source page;
+  the original artwork and animation authors and redistribution permissions
+  have not been established. No license is inferred from download availability.
+- A WCF1 bitmap font generated from macOS PingFang SC Regular
+  (`PingFangSC-Regular`). See Apple's
+  [system font listing](https://developer.apple.com/fonts/system-fonts/) and
+  [software license agreements](https://www.apple.com/legal/sla/). Permission
+  to redistribute this generated bitmap with firmware has not been established;
+  consult the terms accompanying the system and font actually used.
+
+These references acknowledge provenance; they do not grant an asset license,
+relicense the materials under GPL, or imply endorsement of Deepet. Further
+details and asset preparation instructions are in [docs/ASSETS.md](docs/ASSETS.md).
+
 No third-party character GIF, derivative WSP1 sprite, compiled system-font
 bitmap, reference photo or private-device screenshot is distributed here.
 The geometric SVG placeholder in assets/public is original project artwork
